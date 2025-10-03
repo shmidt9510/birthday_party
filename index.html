@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 ДЕНЬ РОЖДЕНИЯ 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, #001a00 10px, #001a00 20px),
+                repeating-linear-gradient(-45deg, transparent, transparent 10px, #002600 10px, #002600 20px);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #00ff00;
+            overflow-x: hidden;
+            animation: bgPulse 3s infinite alternate;
+        }
+
+        @keyframes bgPulse {
+            0% { background-color: #000; }
+            100% { background-color: #001a00; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 72px;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            animation: rainbow 2s infinite, bounce 1s infinite;
+            margin: 30px 0;
+        }
+
+        @keyframes rainbow {
+            0% { color: #00ff00; }
+            25% { color: #00ffff; }
+            50% { color: #ffff00; }
+            75% { color: #00ffff; }
+            100% { color: #00ff00; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .message {
+            background: linear-gradient(135deg, #003300 0%, #006600 100%);
+            border: 5px ridge #00ff00;
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 600px;
+            box-shadow: 0 0 50px #00ff00;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 20px #00ff00; }
+            100% { box-shadow: 0 0 50px #00ff00, 0 0 70px #00ff00; }
+        }
+
+        .message p {
+            font-size: 28px;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: linear-gradient(180deg, #00ff00, #00aa00);
+            color: #000;
+            padding: 15px 40px;
+            margin: 15px;
+            text-decoration: none;
+            border: 3px outset #00ff00;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 20px #00ff00;
+            transition: all 0.3s;
+        }
+
+        .link-button:hover {
+            background: linear-gradient(180deg, #00ff00, #00ff00);
+            transform: scale(1.1);
+            box-shadow: 0 0 40px #00ff00;
+        }
+
+        .link-button:active {
+            border-style: inset;
+        }
+
+        .flying-gif {
+            position: fixed;
+            width: 100px;
+            animation: fly 15s infinite linear;
+            z-index: 100;
+        }
+
+        .gif1 {
+            top: 10%;
+            animation: fly1 20s infinite linear;
+        }
+
+        .gif2 {
+            top: 30%;
+            animation: fly2 25s infinite linear;
+        }
+
+        .gif3 {
+            top: 50%;
+            animation: fly3 18s infinite linear;
+        }
+
+        .gif4 {
+            top: 70%;
+            animation: fly4 22s infinite linear;
+        }
+
+        @keyframes fly1 {
+            0% { left: -150px; transform: translateY(0); }
+            100% { left: 100%; transform: translateY(-100px); }
+        }
+
+        @keyframes fly2 {
+            0% { left: -150px; transform: translateY(0) rotate(0deg); }
+            100% { left: 100%; transform: translateY(50px) rotate(360deg); }
+        }
+
+        @keyframes fly3 {
+            0% { left: -150px; transform: translateY(0); }
+            50% { transform: translateY(-80px); }
+            100% { left: 100%; transform: translateY(0); }
+        }
+
+        @keyframes fly4 {
+            0% { left: -150px; transform: translateY(0) scale(1); }
+            50% { transform: translateY(60px) scale(1.2); }
+            100% { left: 100%; transform: translateY(0) scale(1); }
+        }
+
+        marquee {
+            background: #00ff00;
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 20px 0;
+            border: 3px solid #ffff00;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            animation: sparkleAnim 2s infinite;
+        }
+
+        @keyframes sparkleAnim {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Flying GIFs -->
+    <img src="https://media.tenor.com/4_E21LSI0ogAAAAi/banana-cheerer.gif" class="flying-gif gif1" alt="nyan cat">
+    <img src="https://media1.giphy.com/media/sIIhZliB2McAo/giphy.gif" class="flying-gif gif2" alt="dancing banana">
+    <img src="https://media.tenor.com/3eri_SsI4RQAAAAM/amiii-dance.gif" class="flying-gif gif3" alt="party">
+    <img src="https://media.tenor.com/6W4S76G0aNIAAAAi/nyan-cat-nyan.gif" class="flying-gif gif4" alt="nyan cat">
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2RqYTl4MWczbTU0NWl0cnFrZTQybjU2b3ZxOWRoNmRzZmQ1YzA3ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/KTMGYHGh37iHVrhGna/giphy.gif" class="flying-gif gif5" alt="bananda dance 2">
+
+    <div class="container">
+        <h1>🎂 🤯🤯🤯ААААААААААА!!А!А!А!А!🤯🤯🤯 🎂</h1>
+        
+        <marquee behavior="scroll" direction="left">
+            ★ ✨ 🎉 ТУЦ_ТУЦТУЦУТУЦ! ТОРТ ОПЦИОНАЛЬНО БУДЕТ! 🎉 ✨ ★                     🤷🤷🤷ВЕСЕЛЬЯ НЕ ОБЕЩАЮ!🤷🤷🤷         🥦🥬🌽🧄НАВЕРНОЕ БУДЕТ ВКУСНО🫚🥒🥑🫛
+        </marquee>
+
+        <div class="message">
+            <p>ПРИВЕТ</p>
+            <p>✨✨🏄🏿🏄🏿🏄🏿🏄🏿✨</p>
+            <p>ПРИГЛАШАЮ ТЕБЯ НА СВОЙ ДР</p>
+            <p>👩🏾‍🌾ОН БУДЕТ 18 ОКТЯБРЯ👩🏾‍🌾</p>
+            <p>🫛ГДЕ Я НЕ ЗНАЮ🥑</p>
+            <p>🌽МНОГО ВКУСНОСТЕЙ🥒</p>
+            <p>🎁🎁🎁</p>
+            
+            <a href="#wishlist" class="link-button">
+                📝 ВИШЛИСТ ТУТ
+            </a>
+            
+            <br>
+            
+            <a href="https://t.me/yourusername" class="link-button" target="_blank">
+                💬 ССЫЛКА НА ТЕЛЕГРАМ ТУТ
+            </a>
+            
+            <p style="font-size: 48px; margin-top: 30px;">УРА 🎊</p>
+        </div>
+
+        <marquee behavior="alternate" direction="right">
+            🎈 🎈 🎈 👊🏼👊🏼👊🏼ПРИХОДИ ИЛИ ПОЖАЛЕЕШЬ!!!!!🤌🏽🤌🏽🤌🏽🤌🏽 🎈 🎈 🎈
+        </marquee>
+
+        <div style="margin-top: 50px;">
+            <img src="https://media1.tenor.com/m/at3rEJTK638AAAAC/excited-vlad.gif" alt="party2" style="width: 200px; border: 5px ridge #00ff00;">
+        </div>
+    </div>
+
+    <script>
+        // Create random sparkles
+        setInterval(() => {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.innerHTML = '✨';
+            sparkle.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }, 300);
+    </script>
+</body>
+</html>
